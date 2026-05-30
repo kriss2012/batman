@@ -161,23 +161,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
 
-        {/* RIGHT */}
-        <motion.div id="bruce" className="right" variants={item}>
-          <motion.span className="st-eyebrow right-eyebrow" variants={item}
-            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.25em' }}>
-            Bruce Wayne
-          </motion.span>
-          <h1 className="st-title"
-            style={{ fontFamily: "'Bebas Neue', 'Cinzel Decorative', cursive", letterSpacing: '0.05em' }}>
-            The Man<br />Behind the Mask
-          </h1>
-          <motion.p className="st-text" variants={item}
-            style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontStyle: 'italic' }}>
-            Billionaire by day. Guardian by night. Every scar a lesson,
-            every shadow a weapon. He doesn't kill — but the darkness obeys him.
-            Can one man's will hold a city together when evil never sleeps?
-          </motion.p>
-        </motion.div>
+        {/* The right side has been moved to its own component (Bruce.jsx) to permanently solve the scroll layout bug */}
       </motion.div>
 
     </div>
