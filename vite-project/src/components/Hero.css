@@ -37,7 +37,7 @@
 /* ── Navbar above canvas ── */
 .hero > div:first-of-type {
   position: relative;
-  z-index: 10;
+  z-index: 50;
 }
 
 /* ── Hero content above canvas ── */
