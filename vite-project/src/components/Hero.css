@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+
+:root {
+  --red:       #C0001A;
+  --red-glow:  rgba(192, 0, 26, 0.65);
+  --red-glow2: rgba(192, 0, 26, 0.35);
+  --gold:      #C9A44A;
+}
+
+/* ── Hero ────────────────────────────────── */
+.hero {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* gold/red top accent line */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), var(--red), var(--gold), transparent);
+  z-index: 10;
+}
+
+/* ── Canvas — fills hero, sits behind everything ── */
+.hero-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 0;
+}
+
+/* ── Navbar above canvas ── */
+.hero > div:first-of-type {
+  position: relative;
+  z-index: 10;
+}
+
+/* ── Hero content above canvas ── */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.hero-content .left,
+.hero-content .right {
+  pointer-events: all;
+}
+
+/* ── Left panel ──────────────────────────── */
+.left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.st-eyebrow {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  text-transform: uppercase;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.st-eyebrow::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1.5px;
+  background: var(--gold);
+}
+
+.right-eyebrow {
+  color: #ff4455;
+}
+
+.right-eyebrow::before {
+  background: #ff4455;
+}
+
+.st-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 70px;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-shadow:
+    3px 3px 0px #7A000F,
+    0 0 12px var(--red-glow),
+    0 0 30px var(--red-glow2);
+}
+
+.st-desc {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.01em;
+}
+
+.st-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 15px;
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid var(--red);
+  border-radius: 0;
+  cursor: pointer;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition: border-color 0.3s ease;
+}
+
+.st-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--red);
+  transform: translateX(-105%) skewX(-6deg);
+  transition: transform 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.st-btn:hover { border-color: #E8001F; }
+.st-btn:hover::after { transform: translateX(0) skewX(-6deg); }
+
+/* ── Right panel ─────────────────────────── */
+.right {
+  position: absolute;
+  bottom: 100px;
+  right: -50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 10;
+}
+
+.right::before {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: -10px;
+}
+
+.right .st-title {
+  font-size: 60px;
+  width: 470px;
+}
+
+.st-text {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 300;
+  width: 400px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.01em;
+}

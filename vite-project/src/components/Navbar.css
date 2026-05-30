@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+
+.navbar {
+  position: fixed;
+  width: 1320px;
+  top: 0;
+  height: 72px;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(192, 0, 26, 0.2);
+}
+
+/* ── Logo ─────────────────────────────────── */
+.nav-logo {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.1em;
+    font-size: 22px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+/* "DE PAPEL" in gold */
+.nav-logo span {
+  color: #C9A44A;
+}
+
+/* ── Links ────────────────────────────────── */
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.15em;
+}
+
+.nav-links li {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.70);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  pointer-events: all;
+}
+
+/* underline: gold on hover */
+.nav-links li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 1.5px;
+  background: #C9A44A;
+  transition: width 0.35s ease;
+}
+
+.nav-links li:hover {
+  color: #fff;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
