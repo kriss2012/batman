@@ -6,19 +6,19 @@ const villains = [
   {
     name: 'The Clown Prince',
     role: 'Agent of Chaos',
-    image: '/images/clown.png',
+    image: `${import.meta.env.BASE_URL}images/clown.png`,
     desc: 'Some men aren\'t looking for anything logical. Some men just want to watch the world burn.'
   },
   {
     name: 'The Mastermind',
     role: 'Intellectual Threat',
-    image: '/images/mastermind.png',
+    image: `${import.meta.env.BASE_URL}images/mastermind.png`,
     desc: 'Riddle me this... what is always on its way here, but never arrives?'
   },
   {
     name: 'The Muscle',
     role: 'Physical Dominance',
-    image: '/images/muscle.png',
+    image: `${import.meta.env.BASE_URL}images/muscle.png`,
     desc: 'You merely adopted the dark. I was born in it, molded by it.'
   }
 ]

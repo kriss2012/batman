@@ -20,8 +20,8 @@ const Hero = () => {
 
     const bottom = new Image()
     const top    = new Image()
-    bottom.src = '/images/twoo.jpg'
-    top.src    = '/images/one.jpg'
+    bottom.src = `${import.meta.env.BASE_URL}images/twoo.jpg`
+    top.src    = `${import.meta.env.BASE_URL}images/one.jpg`
 
     const resize = () => {
       canvas.width  = hero.offsetWidth

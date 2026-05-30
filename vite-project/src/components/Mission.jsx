@@ -37,7 +37,7 @@ const Mission = () => {
           transition={{ duration: 0.8 }}
         >
           {/* using the one.jpg as a symbolic image */}
-          <img src="/images/one.jpg" alt="Batman Symbol" className="mission-img" />
+          <img src={`${import.meta.env.BASE_URL}images/one.jpg`} alt="Batman Symbol" className="mission-img" />
           <div className="mission-overlay"></div>
         </motion.div>
       </div>
