@@ -25,7 +25,7 @@ const villains = [
 
 const Villains = () => {
   return (
-    <section className="villains-section">
+    <section className="villains-section" id="rogues">
       <div className="villains-header">
         <h2 className="st-eyebrow" style={{ color: '#ff4455' }}>The Rogues Gallery</h2>
         <h3 className="villains-title">GOTHAM'S NIGHTMARES</h3>
