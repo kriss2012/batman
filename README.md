@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/kriss2012/batman/blob/main/vite-project/public/images/one.jpg" alt="The Dark Knight Banner" width="100%" style="borde r-radius: 12px; margin-bottom: 20px" />
+  <img src="https://raw.githubusercontent.com/kriss2012/batman/main/vite-project/public/images/one.jpg" alt="The Dark Knight Banner" width="100%" style="border-radius: 12px; margin-bottom: 20px" />
 
   <h1 align="center">🦇 THE DARK KNIGHT EXPERIENCE 🦇</h1>
 

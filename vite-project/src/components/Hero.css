@@ -185,3 +185,20 @@
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.01em;
 }
+
+/* ── Mobile Responsiveness ── */
+@media (max-width: 768px) {
+  .left {
+    left: 20px;
+    bottom: 30px;
+    width: calc(100% - 40px);
+  }
+  
+  .st-title {
+    font-size: 45px;
+  }
+  
+  .st-desc {
+    font-size: 15px;
+  }
+}

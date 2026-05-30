@@ -113,3 +113,27 @@
 .villain-card:hover::before {
   transform: scaleX(1);
 }
+
+/* ── Mobile Responsiveness ── */
+@media (max-width: 768px) {
+  .villains-section {
+    padding: 60px 20px;
+  }
+  
+  .villains-title {
+    font-size: 40px;
+  }
+  
+  .villains-grid {
+    gap: 25px;
+  }
+  
+  .villain-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .villain-img-wrapper {
+    height: 350px;
+  }
+}
