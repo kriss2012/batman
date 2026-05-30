@@ -43,6 +43,10 @@
   letter-spacing: 0.15em;
 }
 
+.nav-links li {
+  position: relative;
+}
+
 .nav-links li a {
   text-decoration: none;
   color: inherit;
