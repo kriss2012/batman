@@ -125,7 +125,7 @@ const Hero = () => {
   }
 
   return (
-    <div className="hero" ref={heroRef}>
+    <div className="hero" id="gotham" ref={heroRef}>
 
       <canvas ref={canvasRef} className="hero-canvas" />
 
@@ -155,14 +155,14 @@ const Hero = () => {
             Gotham's last hope wears no badge, carries no gun,
             and fears nothing but the day his city stops fighting back.
           </motion.p>
-          <motion.button className="st-btn" variants={item}
-            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.2em' }}>
+          <motion.a href="#mission" className="st-btn" variants={item}
+            style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.2em', textDecoration: 'none', textAlign: 'center' }}>
             Enter the Dark
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* RIGHT */}
-        <motion.div className="right" variants={item}>
+        <motion.div id="bruce" className="right" variants={item}>
           <motion.span className="st-eyebrow right-eyebrow" variants={item}
             style={{ fontFamily: "'Cinzel', serif", letterSpacing: '0.25em' }}>
             Bruce Wayne
