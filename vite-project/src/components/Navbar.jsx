@@ -7,10 +7,10 @@ const Navbar = () => {
       <div className="nav-logo">THE DARK <span>KNIGHT</span></div>
 
       <ul className="nav-links">
-        <li>Gotham</li>
-        <li>Bruce Wayne</li>
-        <li>The Rogues</li>
-        <li>The Mission</li>
+        <li><a href="#gotham">Gotham</a></li>
+        <li><a href="#bruce">Bruce Wayne</a></li>
+        <li><a href="#rogues">The Rogues</a></li>
+        <li><a href="#mission">The Mission</a></li>
       </ul>
     </nav>
   )
