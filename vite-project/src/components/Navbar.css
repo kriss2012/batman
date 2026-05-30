@@ -25,6 +25,8 @@
   text-transform: uppercase;
   color: #fff;
   line-height: 1;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 /* "DE PAPEL" in gold */
@@ -49,6 +51,7 @@
   font-size: 16px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  pointer-events: all;
 }
 
 .nav-links li a:hover {
