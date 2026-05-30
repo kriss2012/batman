@@ -2,6 +2,7 @@
 import './App.css'
 import Hero from './components/Hero'
 import Villains from './components/Villains'
+import Mission from './components/Mission'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <main>
       <Hero />
       <Villains />
+      <Mission />
     </main>
   )
 }
