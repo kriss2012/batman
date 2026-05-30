@@ -1,0 +1,115 @@
+.villains-section {
+  min-height: 100vh;
+  background-color: #050505;
+  color: #fff;
+  padding: 100px 50px;
+  position: relative;
+  z-index: 20;
+}
+
+.villains-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.villains-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 60px;
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+  text-shadow: 2px 2px 0px #7A000F;
+}
+
+.villains-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.villain-card {
+  width: 350px;
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  transition: transform 0.4s ease, border-color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.villain-card:hover {
+  transform: translateY(-10px);
+  border-color: #C0001A;
+}
+
+.villain-img-wrapper {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.villain-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.4s ease;
+  filter: grayscale(100%) contrast(1.2);
+}
+
+.villain-card:hover .villain-img {
+  transform: scale(1.05);
+  filter: grayscale(20%) contrast(1.2);
+}
+
+.villain-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #0a0a0a 0%, transparent 50%);
+}
+
+.villain-info {
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+  background: #0a0a0a;
+}
+
+.villain-role {
+  font-family: 'Bebas Neue', sans-serif;
+  color: #C0001A;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.villain-name {
+  font-family: 'Anton', sans-serif;
+  font-size: 32px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  color: #f0f0f0;
+}
+
+.villain-desc {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #999;
+  line-height: 1.6;
+}
+
+.villain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: 10;
+}
+
+.villain-card:hover::before {
+  transform: scaleX(1);
+}
