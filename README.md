@@ -76,7 +76,6 @@ Want to run the Dark Knight experience on your own machine? Follow these simple 
    ```bash
    npm run dev
    ```
-
 4. **View the site:** Open your browser and navigate to `http://localhost:5173/`.
 
 <br />
