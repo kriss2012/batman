@@ -30,10 +30,10 @@ const Villains = () => {
         <h2 className="st-eyebrow" style={{ color: '#ff4455' }}>The Rogues Gallery</h2>
         <h3 className="villains-title">GOTHAM'S NIGHTMARES</h3>
       </div>
-      
+
       <div className="villains-grid">
         {villains.map((villain, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
             className="villain-card"
             initial={{ opacity: 0, y: 50 }}
@@ -58,3 +58,4 @@ const Villains = () => {
 }
 
 export default Villains
+// Made By Krishna Patil
