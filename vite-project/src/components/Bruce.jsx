@@ -6,7 +6,7 @@ const Bruce = () => {
   return (
     <section className="bruce-section" id="bruce">
       <div className="bruce-container">
-        <motion.div 
+        <motion.div
           className="bruce-content"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -31,3 +31,4 @@ const Bruce = () => {
 }
 
 export default Bruce
+// Made By Krishna Patil
