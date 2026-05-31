@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
 
 :root {
-  --red:       #C0001A;
-  --red-glow:  rgba(192, 0, 26, 0.65);
+  --red: #C0001A;
+  --red-glow: rgba(192, 0, 26, 0.65);
   --red-glow2: rgba(192, 0, 26, 0.35);
-  --gold:      #C9A44A;
+  --gold: #C9A44A;
 }
 
 /* ── Hero ────────────────────────────────── */
@@ -18,7 +18,9 @@
 .hero::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   background: linear-gradient(90deg, transparent, var(--gold), var(--red), var(--gold), transparent);
   z-index: 10;
@@ -35,7 +37,7 @@
 }
 
 /* ── Navbar above canvas ── */
-.hero > div:first-of-type {
+.hero>div:first-of-type {
   position: relative;
   z-index: 50;
 }
@@ -147,8 +149,13 @@
   z-index: -1;
 }
 
-.st-btn:hover { border-color: #E8001F; }
-.st-btn:hover::after { transform: translateX(0) skewX(-6deg); }
+.st-btn:hover {
+  border-color: #E8001F;
+}
+
+.st-btn:hover::after {
+  transform: translateX(0) skewX(-6deg);
+}
 
 /* ── Right panel ─────────────────────────── */
 .right {
@@ -193,12 +200,14 @@
     bottom: 30px;
     width: calc(100% - 40px);
   }
-  
+
   .st-title {
     font-size: 45px;
   }
-  
+
   .st-desc {
     font-size: 15px;
   }
 }
+
+/* Made By Krishna Patil */
