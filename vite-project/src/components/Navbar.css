@@ -21,7 +21,7 @@
 .nav-logo {
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 0.1em;
-    font-size: 22px;
+  font-size: 22px;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: #fff;
@@ -92,18 +92,20 @@
     height: auto;
     gap: 12px;
   }
-  
+
   .nav-logo {
     font-size: 18px;
   }
-  
+
   .nav-links {
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .nav-links li a {
     font-size: 12px;
   }
 }
+
+/* Made By Krishna Patil */
