@@ -4,27 +4,27 @@ import './Hero.css'
 import Navbar from './Navbar'
 
 const Hero = () => {
-  const heroRef   = useRef(null)
+  const heroRef = useRef(null)
   const canvasRef = useRef(null)
-  const mouseRef  = useRef({ x: -9999, y: -9999 })
+  const mouseRef = useRef({ x: -9999, y: -9999 })
   const smoothRef = useRef({ x: -9999, y: -9999 })
-  const trailRef  = useRef([])
+  const trailRef = useRef([])
 
   useEffect(() => {
-    const hero   = heroRef.current
+    const hero = heroRef.current
     const canvas = canvasRef.current
-    const ctx    = canvas.getContext('2d')
+    const ctx = canvas.getContext('2d')
 
     const TRAIL_LENGTH = 60
-    const HEAD_RADIUS  = 180
+    const HEAD_RADIUS = 180
 
     const bottom = new Image()
-    const top    = new Image()
+    const top = new Image()
     bottom.src = `${import.meta.env.BASE_URL}images/twoo.jpg`
-    top.src    = `${import.meta.env.BASE_URL}images/one.jpg`
+    top.src = `${import.meta.env.BASE_URL}images/one.jpg`
 
     const resize = () => {
-      canvas.width  = hero.offsetWidth
+      canvas.width = hero.offsetWidth
       canvas.height = hero.offsetHeight
     }
     resize()
@@ -60,13 +60,13 @@ const Hero = () => {
       ctx.drawImage(bottom, 0, 0, width, height)
 
       const offscreen = document.createElement('canvas')
-      offscreen.width  = width
+      offscreen.width = width
       offscreen.height = height
       const off = offscreen.getContext('2d')
 
       for (let i = 0; i < trail.length; i++) {
-        const t     = 1 - i / trail.length
-        const r     = HEAD_RADIUS * (0.25 + 0.75 * t)
+        const t = 1 - i / trail.length
+        const r = HEAD_RADIUS * (0.25 + 0.75 * t)
         const alpha = Math.pow(t, 1.5)
         off.beginPath()
         off.arc(trail[i].x, trail[i].y, r, 0, Math.PI * 2)
@@ -86,9 +86,9 @@ const Hero = () => {
           head.x, head.y, 0,
           head.x, head.y, HEAD_RADIUS * 1.4
         )
-        glow.addColorStop(0,   'rgba(232, 180, 30, 0.22)')
+        glow.addColorStop(0, 'rgba(232, 180, 30, 0.22)')
         glow.addColorStop(0.5, 'rgba(232, 180, 30, 0.10)')
-        glow.addColorStop(1,   'rgba(0,0,0,0)')
+        glow.addColorStop(1, 'rgba(0,0,0,0)')
         ctx.beginPath()
         ctx.arc(head.x, head.y, HEAD_RADIUS * 1.4, 0, Math.PI * 2)
         ctx.fillStyle = glow
@@ -100,7 +100,7 @@ const Hero = () => {
     let loaded = 0
     const onLoad = () => { if (++loaded === 2) draw() }
     bottom.onload = onLoad
-    top.onload    = onLoad
+    top.onload = onLoad
 
     return () => {
       hero.removeEventListener('mousemove', onMove)
@@ -115,12 +115,12 @@ const Hero = () => {
   }
 
   const item = {
-    hidden:  { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 70, damping: 12 } },
   }
 
   const navbarVariant = {
-    hidden:  { y: -100, opacity: 0 },
+    hidden: { y: -100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { type: 'spring', stiffness: 80, damping: 14 } },
   }
 
@@ -169,3 +169,4 @@ const Hero = () => {
 }
 
 export default Hero
+// Made By Krishna Patil
