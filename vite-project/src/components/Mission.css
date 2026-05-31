@@ -13,7 +13,9 @@
 .mission-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
   z-index: 10;
@@ -87,7 +89,7 @@
   .mission-section {
     padding: 60px 20px;
   }
-  
+
   .mission-container {
     gap: 40px;
   }
@@ -96,8 +98,10 @@
     font-size: 38px;
     margin-bottom: 20px;
   }
-  
+
   .mission-text {
     font-size: 16px;
   }
 }
+
+/* Made By Krishna Patil */
